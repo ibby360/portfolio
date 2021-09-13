@@ -1,0 +1,567 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+            <!-- SITE MAIN CONTENT -->
+            <main class="site-main" id="site-main" tabindex="-1">
+                <!-- SITE HOME -->
+                <section id="home" class="home" tabindex="-1">
+                    <div class="container-fluid">
+                        <div class="home__grid">
+                            <div class="home__content">
+                                <div class="home__introductory">
+                                    <div class="home__introductory-text">Hola, My name is</div>
+                                    <div class="home__introductory-line"><span class="line line--horizontal line--home"></span></div>
+                                </div>
+                                <h1 class="site-title">Ibrahim, a junior web developer based in Tanzania.</h1>
+                            </div>
+                            <div class="home__full-cover jarallax">
+                                <img loading="lazy" src="{% static 'assets/images/hero-bg.jpg' %}" alt="Man seen from the back on top of a building looking at the city in front of him" class="jarallax-img" />
+                                <span class="home__full-cover-overlay"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- END SITE HOME -->
+
+                <!-- ABOUT ME -->
+                <section id="about" class="section" tabindex="-1">
+                    <div class="container">
+                        <header class="section__header fade-up-start" data-gc="fade-up">
+                            <h2>About Me</h2>
+                            <div class="line line--horizontal line--heading" aria-hidden="true"></div>
+                        </header>
+                        <div class="about-me__grid">
+                            <div>
+                                <div class="position-relative fade-up-start" data-gc="fade-up">
+                                    <div class="about-me__img-bg"></div>
+                                    <div class="line line--horizontal line--about-me"></div>
+                                    <img loading="lazy" class="img-fluid about-me__img" src="{% static 'assets/images/ibby360.jpg' %}" alt="Ibby standing on top of building" />
+                                </div>
+                            </div>
+                            <div class="about-me__content">
+                                <div class="fade-up-start" data-gc="fade-up">
+                                    <p>
+                                        I'm a junior web developer that likes working on the front end but also appreciates working on the back end.
+                                    </p>
+                                    <p>
+                                        I'm naturally curious and like trying to figure out how things function. I have a strong visual sense and like creating smart, entertaining, and effective online apps with a clean, distinct style.
+                                    </p>
+                                </div>
+                                <br />
+                                <div class="fade-up-start" data-gc="fade-up">
+                                    <h3>My skills</h3>
+                                    <ul class="list-reset">
+                                        <li class="skill-bar">
+                                            <div class="skill-bar__title"><span>HTML</span> <span class="skill-bar__value"></span></div>
+                                            <div class="skill-bar__bg" aria-hidden="true"><div class="skill-bar__amount" data-skill-bar-amount="95"></div></div>
+                                        </li>
+                                        <li class="skill-bar">
+                                            <div class="skill-bar__title"><span>CSS/SASS</span> <span class="skill-bar__value"></span></div>
+                                            <div class="skill-bar__bg" aria-hidden="true"><div class="skill-bar__amount" data-skill-bar-amount="85"></div></div>
+                                        </li>
+                                        <li class="skill-bar">
+                                            <div class="skill-bar__title"><span>JavaScript</span> <span class="skill-bar__value"></span></div>
+                                            <div class="skill-bar__bg" aria-hidden="true"><div class="skill-bar__amount" data-skill-bar-amount="50"></div></div>
+                                        </li>
+                                        <li class="skill-bar">
+                                            <div class="skill-bar__title"><span>Python/Django</span> <span class="skill-bar__value"></span></div>
+                                            <div class="skill-bar__bg" aria-hidden="true"><div class="skill-bar__amount" data-skill-bar-amount="75"></div></div>
+                                        </li>
+                                        <!-- <li class="download-cv">
+                                            <a href="" id="download-button" type="button" class="home__button button button--default">
+                                                <span class="line--underline">RESUME</span>
+                                            </a>
+                                        </li> -->
+                                    </ul>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hire-me fade-up-start" data-gc="fade-up">
+                        <span class="hire-me__surface"></span>
+                        <div class="hire-me__content">
+                            <h2>I'm available for new jobs</h2>
+                            <a href="#contact" class="button button--default mt-3"><span class="line--underline">Get in touch</span></a>
+                        </div>
+                        <span class="hire-me__line"></span>
+                    </div>
+                </section>
+                <!-- END ABOUT ME -->
+
+                <!-- EXPERIENCE -->
+                <section id="experience" class="section" tabindex="-1">
+                    <div class="container">
+                        <header class="section__header fade-up-start" data-gc="fade-up">
+                            <h2>Experience</h2>
+                            <div class="line line--horizontal line--heading" aria-hidden="true"></div>
+                        </header>
+                        <div class="experience__grid">
+                            <div class="fade-up-start" data-gc="fade-up">
+                                <div class="timeline">
+                                    <span class="timeline__vertical-line"></span>
+                                    <h3 class="timeline__title">Education</h3>
+                                    <div class="timeline__item">
+                                        <h4>Diploma in Information Technology</h4>
+                                        <span class="timeline__item-bullet"></span>
+                                        <span class="timeline__item-date"><span class="heading-5">march 2019</span> <span class="line line--horizontal line--separator"></span> <span class="heading-5">june 2021</span> </span>
+                                        <span class="heading-5">university of dar es salaam computing center</span>
+                                        <p class="timeline__item-p"></p>
+                                        <p class="bold">Developed skills</p>
+                                        <ul class="dash-list">
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Database Driven Website</li>
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> System Analysis and Design</li>
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> OOP</li>
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Android Applications</li>
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Linux</li>
+                                        </ul>
+                                    </div>
+
+
+                                    <div class="timeline__item">
+                                        <h4>Certificete in Information Technology</h4>
+                                        <span class="timeline__item-bullet"></span>
+                                        <span class="timeline__item-date"><span class="heading-5">november 2017</span> <span class="line line--horizontal line--separator"></span> <span class="heading-5">november 2018</span> </span>
+                                        <span class="heading-5">university of dar es salaam computing center</span>
+                                        <p class="timeline__item-p"></p>
+                                        <p class="bold">Developed skills</p>
+                                        <ul class="dash-list">
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Graphic Designing</li>
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> IT Essensial</li>
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Wordpress</li>
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Intro in Web Dev</li>
+                                        </ul>
+                                    </div>
+                                    <span class="timeline__start-point"></span>
+                                </div>
+                            </div>
+
+
+                            <div class="fade-up-start" data-gc="fade-up">
+                                <div class="timeline">
+                                    <span class="timeline__vertical-line"></span>
+                                    <h3 class="timeline__title">Professional</h3>
+                                    <div class="timeline__item">
+                                        <h4>Front end developer</h4>
+                                        <span class="timeline__item-bullet"></span>
+                                        <span class="timeline__item-date"><span class="heading-5">august 2020</span> <span class="line line--horizontal line--separator"></span> <span class="heading-5">now</span> </span>
+                                        <span class="heading-5">open source contributer</span>
+                                        <p class="timeline__item-p"></p>
+                                        <p class="bold">Developed skills</p>
+                                        <ul class="dash-list">
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> HTML</li>
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> CSS</li>
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> JavaScript</li>
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Team Working</li>
+                                        </ul>
+                                    </div>
+                                    <div class="timeline__item">
+                                        <h4>Graphics Designer</h4>
+                                        <span class="timeline__item-bullet"></span>
+                                        <span class="timeline__item-date"><span class="heading-5">december 2016</span> <span class="line line--horizontal line--separator"></span> <span class="heading-5">Now</span> </span>
+                                        <span class="heading-5">Freelancing</span>
+                                        <p class="timeline__item-p"></p>
+                                        <p class="bold">Developed skills</p>
+                                        <ul class="dash-list">
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Research</li>
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Wireframe</li>
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Mockups</li>
+                                            <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Business Communication</li>
+                                        </ul>
+                                    </div>
+                                    <span class="timeline__start-point"></span>
+                                    <ul class="list-reset">
+                                        <li class="download-cv">
+                                            <a href="" id="download-button" type="button" class="home__button button button--default">
+                                                <span class="line--underline">RESUME</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- END EXPERIENCE -->
+
+                <!-- PORTFOLIO -->
+                <section id="portfolio" class="section" tabindex="-1">
+                    <div class="container">
+                        <header class="section__header fade-up-start" data-gc="fade-up">
+                            <h2>Portfolio</h2>
+                            <div class="line line--horizontal line--heading" aria-hidden="true"></div>
+                        </header>
+                        <div class="portfolio fade-up-start" data-gc="fade-up">
+                            <nav aria-label="Portfolio categories navigation" class="navigation navigation--portfolio">
+                                <ul class="portfolio__filter-list">
+                                    <li>
+                                        <button class="button navigation__link" data-filter="*"><span class="sr-only">Filter by </span>All</button>
+                                    </li>
+                                    <li>
+                                        <button class="button navigation__link" data-filter=".filter-design"><span class="sr-only">Filter by Category </span>Design</button>
+                                    </li>
+                                    <li>
+                                        <button class="button navigation__link" data-filter=".filter-UI"><span class="sr-only">Filter by Category </span>UI</button>
+                                    </li>
+                                    <li>
+                                        <button class="button navigation__link" data-filter=".filter-website"><span class="sr-only">Filter by Category </span>Website</button>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <ul class="portfolio__grid">
+                                <!-- PORTFOLIO THUMBNAIL 1 -->
+                                <li class="portfolio__thumb filter-design filter-website">
+                                    <div class="d-md-none">
+                                        <h3 class="heading-4 mb-2">Agriculture and business information system</h3>
+                                        <ul class="portfolio__grid-link-category mb-3" aria-hidden="true">
+                                            <li class="heading-5 mr-2"><span>#</span>design</li>
+                                            <li class="heading-5 mr-2"><span>#</span>website</li>
+                                        </ul>
+                                    </div>
+                                    <a class="portfolio__grid-link" href="#portfolio-open">
+                                        <img class="portfolio__gallery-img img-fluid lazyimage" src="{% static 'assets/images/portfolio/home.png' %}" data-src="{% static 'assets/images/portfolio/home.png' %}" alt="An amazing project" />
+                                        <div class="portfolio__grid-link-infos">
+                                            <header class="portfolio__grid-link-infos-header" aria-hidden="true">
+                                                <h3 class="portfolio__grid-title heading-4">Agriculture and business information system
+                                                </h3>
+                                                <ul class="portfolio__grid-link-category" aria-hidden="true">
+                                                    <li class="portfolio__grid-link-category-item mr-2"><span>#</span>design</li>
+                                                    <li class="portfolio__grid-link-category-item mr-2"><span>#</span>website</li>
+                                                </ul>
+                                            </header>
+                                            <footer class="portfolio__grid-link-infos-footer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                                                    <rect fill="none" height="24" width="24" />
+                                                    <polygon points="21,11 21,3 13,3 16.29,6.29 6.29,16.29 3,13 3,21 11,21 7.71,17.71 17.71,7.71" />
+                                                </svg>
+                                            </footer>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- END PORTFOLIO THUMBNAIL 1 -->
+
+                                <!-- PORTFOLIO THUMBNAIL 2 -->
+                                <!-- <li class="portfolio__thumb filter-photo filter-website">
+                                    <div class="d-md-none">
+                                        <h3 class="heading-4 mb-2">Another great fake project</h3>
+                                        <ul class="portfolio__grid-link-category mb-3" aria-hidden="true">
+                                            <li class="heading-5 mr-2"><span>#</span>photo</li>
+                                            <li class="heading-5 mr-2"><span>#</span>website</li>
+                                        </ul>
+                                    </div>
+                                    <a class="portfolio__grid-link" href="#portfolio-open">
+                                        <img class="portfolio__gallery-img img-fluid lazyimage" src="{% static 'portfolio-thumbnail-placeholder.png" data-src="{% static 'portfolio-item-2-1.jpg" alt="Another great fake project" />
+                                        <div class="portfolio__grid-link-infos">
+                                            <header class="portfolio__grid-link-infos-header" aria-hidden="true">
+                                                <h3 class="portfolio__grid-title heading-4">Another great fake project</h3>
+                                                <ul class="portfolio__grid-link-category" aria-hidden="true">
+                                                    <li class="portfolio__grid-link-category-item mr-2"><span>#</span>photo</li>
+                                                    <li class="portfolio__grid-link-category-item mr-2"><span>#</span>website</li>
+                                                </ul>
+                                            </header>
+                                            <footer class="portfolio__grid-link-infos-footer">
+                                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                                                    <rect fill="none" height="24" width="24" />
+                                                    <polygon points="21,11 21,3 13,3 16.29,6.29 6.29,16.29 3,13 3,21 11,21 7.71,17.71 17.71,7.71" />
+                                                </svg>
+                                            </footer>
+                                        </div>
+                                    </a>
+                                </li> -->
+                                <!-- END PORTFOLIO THUMBNAIL 2 -->
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!-- END PORTFOLIO -->
+
+                <!-- BLOG -->
+                <section id="blog" class="section" tabindex="-1">
+                    <div class="container">
+                        <header class="section__header fade-up-start" data-gc="fade-up">
+                            <h2>Blog</h2>
+                            <div class="line line--horizontal line--heading" aria-hidden="true"></div>
+                            <p class="section__header-p">Because I am not an excellent writer, I like reading. Here are a few dev.to articles.  </p>
+                        </header>
+                        <div class="blog__grid">
+                            <article class="blog-post fade-up-start" data-gc="fade-up">
+                                <span class="blog-post__surface"></span>
+                                <div class="position-relative">
+                                    <a class="blog-post__img-link" href="#"><img loading="lazy" class="blog-post__img img-fluid" src="{% static 'assets/images/becoming-a-web-developer.jpg' %}" alt="How to become a web developer vector image" /></a>
+                                    <header class="blog-post__header">
+                                        <h3 class="blog-post__title heading-4"><a href="#">5 projects to master Front End Development</a></h3>
+                                        <div class="blog-post__author">
+                                            <div class="heading-5">
+                                                <time class="heading-5 blog-post__date">06 june 2021</time><span aria-hidden="true">,</span> <span class="blog-post__author-name color--secondary">By Tapajyoti Bose </span>
+                                            </div>
+                                            <div class="line line--horizontal line--post"></div>
+                                        </div>
+                                    </header>
+                                    <div class="blog-post__content">
+                                        <p>
+                                            If you are starting on the journey to becoming a Front End Developer, once you get the basics down, you might want to make projects as the best way to learn any skill is to try making something hands-on.
+                                        </p>
+                                    </div>
+                                </div>
+                                <footer class="blog-post__footer">
+                                    <a class="blog-post__read-more" href="https://dev.to/ruppysuppy/5-projects-to-master-front-end-development-57p" target="_blank"><span aria-hidden="true">Read more</span> <span class="sr-only">Read more about: 5 Project to master front-end development</span></a>
+                                </footer>
+                            </article>
+
+
+                            <article class="blog-post fade-up-start" data-gc="fade-up">
+                                <span class="blog-post__surface"></span>
+                                <div class="position-relative">
+                                    <a class="blog-post__img-link" href="#"><img loading="lazy" class="blog-post__img img-fluid" src="{% static 'assets/images/developer.png' %}" alt="A developers vector image" /></a>
+                                    <header class="blog-post__header">
+                                        <h3 class="blog-post__title heading-4"><a href="#">How to become a Successful Developer</a></h3>
+                                        <div class="blog-post__author">
+                                            <div class="heading-5">
+                                                <time class="heading-5 blog-post__date">06  june 2021</time><span aria-hidden="true">,</span> <span class="blog-post__author-name color--secondary">By Krowser </span>
+                                            </div>
+                                            <div class="line line--horizontal line--post"></div>
+                                        </div>
+                                    </header>
+                                    <div class="blog-post__content">
+                                        <p>
+                                            For me, being a software developer is one of the best jobs in the world. I love to code and getting paid for it is just awesome. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <footer class="blog-post__footer">
+                                    <a class="blog-post__read-more" href="https://dev.to/krowser/how-to-become-a-successful-developer-4h2g" target="_blank"><span aria-hidden="true">Read more</span> <span class="sr-only">Read more about: how to become a successful developer</span></a>
+                                </footer>
+                            </article>
+
+
+                            <article class="blog-post fade-up-start" data-gc="fade-up">
+                                <span class="blog-post__surface"></span>
+                                <div class="position-relative">
+                                    <a class="blog-post__img-link" href="#"><img loading="lazy" class="blog-post__img img-fluid" src="{% static 'assets/images/portfolio.jpg' %}" alt="Flowering cherry tree" /></a>
+                                    <header class="blog-post__header">
+                                        <h3 class="blog-post__title heading-4"><a href="#">How to Build a Great Developer Portfolio (+ Examples & Tools) </a></h3>
+                                        <div class="blog-post__author">
+                                            <div class="heading-5">
+                                                <time class="heading-5 blog-post__date">26 may 2021</time><span aria-hidden="true">,</span> <span class="blog-post__author-name color--secondary">By Anastasia 🏄🏻‍♀️ </span>
+                                            </div>
+                                            <div class="line line--horizontal line--post"></div>
+                                        </div>
+                                    </header>
+                                    <div class="blog-post__content">
+                                        <p>
+                                            As any other specialists, developers need to market themselves to get dream jobs and projects, attract more clients and reach a desirable level of income. The necessary skills and a killer portfolio website are the two things that you need. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <footer class="blog-post__footer">
+                                    <a class="blog-post__read-more" href="https://dev.to/actitime/how-to-build-a-great-developer-portfolio-examples-tools-bkj" target="_blank"><span aria-hidden="true">Read more</span> <span class="sr-only">Read more about: How to build a great developer portfolio examples tools</span></a>
+                                </footer>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <!-- END BLOG -->
+
+                <!-- CONTACT -->
+                <section id="contact" class="section" tabindex="-1">
+                    <div class="container">
+                        <header class="section__header fade-up-start" data-gc="fade-up">
+                            <h2>Contact</h2>
+                            <div class="line line--horizontal line--heading" aria-hidden="true"></div>
+                        </header>
+                        <div class="contact__grid">
+                            <div class="fade-up-start" data-gc="fade-up">
+                                <div class="contact-info">
+                                    <div class="contact-info__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                                            <path d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10h5v-2h-5c-4.34 0-8-3.66-8-8s3.66-8 8-8 8 3.66 8 8v1.43c0 .79-.71 1.57-1.5 1.57s-1.5-.78-1.5-1.57V12c0-2.76-2.24-5-5-5s-5 2.24-5 5 2.24 5 5 5c1.38 0 2.64-.56 3.54-1.47.65.89 1.77 1.47 2.96 1.47 1.97 0 3.5-1.6 3.5-3.57V12c0-5.52-4.48-10-10-10zm0 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <span class="contact-info__text">ibrahimramadhan@outlook.com</span>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-info__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                                            <path d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <span class="contact-info__text">+255 748 020 076</span>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-info__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                                            <path d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                        </svg>
+                                    </div>
+                                    <span class="contact-info__text">
+                                        Dar es Salaam, Tanzania<br />
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="fade-up-start" data-gc="fade-up">
+                                <form action="https://formspree.io/f/mgeryjnr" method="POST" enctype="multipart/form-data" class="form-contact" id="contact-form">
+                                    <span class="form-contact__surface"></span>
+                                    <div class="form-group"><div id="form-live-region" class="form__message" role="alert" aria-atomic="true" data-error-instruction="There were some issues with the form submission"></div></div>
+                                    <div class="form-group"><p>All fields are required.</p></div>
+                                    <div class="form-contact__two-columns">
+                                        <div class="form-group">
+                                            <label class="form__label" for="form-name">Name</label> <input class="form-control form__field" id="form-name" name="name" data-error-message="Name is a require field." aria-required="true" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form__label" for="form-email">Email</label>
+                                            <input class="form-control form__field" type="email" id="form-email" name="email" data-error-message="Insert a valid e-mail." aria-required="true" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form__label" for="form-message">Message</label>
+                                        <textarea class="form-control form__field" id="form-message" rows="5" name="message" data-error-message="Message is a require field." aria-required="true"></textarea>
+                                    </div>
+                                    <div class="form-group form__button-wrapper">
+                                        <button type="submit" id="contact-form__submit-button" class="button button--default">
+                                            <span class="button__text line--underline">Submit</span> <span class="button__spinner spinner-dual-ring"><span></span></span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- END CONTACT -->
+            </main>
+
+            <!-- PORTFOLIO MODAL -->
+            <div class="portfolio-modal" id="portfolio-modal" inert>
+                <div class="portfolio-modal__main">
+                    <div class="portfolio-modal__main-inner">
+                        <div class="swiper-container portfolio-modal__carousel">
+                            <div class="swiper-wrapper">
+
+                                <!-- PORTFOLIO ITEM 1 -->
+                                <div class="swiper-slide portfolio-item">
+                                    <div class="portfolio-item__content">
+                                        <div class="portfolio-item__header mt-3 mb-4">
+                                            <h3 class="portfolio-item__title" tabindex="-1">An amazing fake project</h3>
+                                            <div class="heading-5">
+                                                <span class="sr-only">Categories </span><span class="mr-2"><span aria-hidden="true">#</span><span>design</span></span>
+                                                <span class="mr-2"><span aria-hidden="true">#</span><span>website</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-item__imgs">
+                                        <div class="portfolio-item__img-wrapper"><img loading="lazy" class="img-fluid" src="{% static 'assets/images/portfolio/practice.png' %}" alt="Fake project image for demonstration purposes only" /></div>
+                                        <div class="portfolio-item__img-wrapper"><img loading="lazy" class="img-fluid" src="{% static 'assets/images/portfolio/market.png' %}" alt="Fake project image for demonstration purposes only" /></div>
+                                        <div class="portfolio-item__img-wrapper"><img loading="lazy" class="img-fluid" src="{% static 'assets/images/portfolio/cart.png' %}" alt="Fake project image for demonstration purposes only" /></div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="portfolio-item__content">
+                                            <div class="portfolio-item__description">
+                                                <div class="line line--horizontal line--portfolio"></div>
+                                                <p class="portfolio-item__description-p">
+                                                    This is my senior project.It's also my first project in which I created a website for agricultural and business information.
+                                                    All of the website's functionality is operational, including authentication, leaving a comment on a post, cart, and payment options.
+
+                                                    As the server-side language in my project, I'm using Python/Django.
+                                                    This project taught me a lot. 
+                                                </p>
+                                                <p class="bold">Skills</p>
+                                                <ul class="dash-list portfolio-item__description-list">
+                                                    <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Back-end</li>
+                                                    <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Designing</li>
+                                                    <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Front-end</li>
+                                                    <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Problem Solving</li>
+                                                </ul>
+                                                <a class="portfolio-item__link-icon button button--icon button--icon-default" href="https://agribizzz.pythonanywhere.com" aria-label="Open An amazing fake project project">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                                                        <path d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- POPRTFOLIO ITEM 2 -->
+                                <div class="swiper-slide portfolio-item">
+                                    <div class="portfolio-item__content">
+                                        <div class="portfolio-item__header mt-3 mb-4">
+                                            <h3 class="portfolio-item__title" tabindex="-1">Another great fake project</h3>
+                                            <div class="heading-5">
+                                                <span class="sr-only">Categories </span><span class="mr-2"><span aria-hidden="true">#</span><span>photo</span></span>
+                                                <span class="mr-2"><span aria-hidden="true">#</span><span>website</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-item__imgs">
+                                        <div class="portfolio-item__img-wrapper"><img loading="lazy" class="img-fluid" src="{% static 'portfolio-item-2-1.jpg' %}" alt="Fake project image for demonstration purposes only" /></div>
+                                        <div class="portfolio-item__img-wrapper"><img loading="lazy" class="img-fluid" src="{% static 'portfolio-item-2-2.jpg' %}" alt="Fake project image for demonstration purposes only" /></div>
+                                        <div class="portfolio-item__img-wrapper"><img loading="lazy" class="img-fluid" src="{% static 'portfolio-item-2-3.jpg' %}" alt="Fake project image for demonstration purposes only" /></div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="portfolio-item__content">
+                                            <div class="portfolio-item__description">
+                                                <div class="line line--horizontal line--portfolio"></div>
+                                                <p class="portfolio-item__description-p">
+                                                    This is a fake text, it is used to fill some text area that doesn't have any content written yet. It simulates how the paragraph will look like. Remember to edit this content before
+                                                    publishing your project.
+                                                </p>
+                                                <p class="bold">Skills</p>
+                                                <ul class="dash-list portfolio-item__description-list">
+                                                    <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Illustrator</li>
+                                                    <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Photoshop</li>
+                                                    <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Mockup</li>
+                                                </ul>
+                                                <a class="portfolio-item__link-icon button button--icon button--icon-default" href="#" aria-label="Open Another great fake project project">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
+                                                        <path d="M0 0h24v24H0z" fill="none" />
+                                                        <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="portfolio-nav">
+                    <button type="button" aria-label="Previous portfolio item" aria-controls="portfolio-modal" class="button button--icon button--icon-default button--carousel portfolio-nav__button--prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24"><path d="M14.5,20.4l1.4-1.4l-7-7l7-7l-1.4-1.4L6.1,12L14.5,20.4z" /></svg>
+                    </button>
+                    <div class="portfolio-nav__button--close portfolio-nav__button--mobile">
+                        <button aria-label="Close portfolio modal" class="button button--icon button--icon-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <button type="button" aria-label="Next portfolio item" aria-controls="portfolio-modal" class="button button--icon button--icon-default button--carousel portfolio-nav__button--next">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24"><path d="M9.5,3.6L8.1,5l7,7l-7,7l1.4,1.4l8.4-8.4L9.5,3.6z" /></svg>
+                    </button>
+                    <div class="portfolio-nav__button--close portfolio-nav__button--desktop">
+                        <button aria-label="Close portfolio modal" class="button button--icon button--icon-default">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                            </svg>
+                        </button>
+                        <small>esc</small>
+                    </div>
+                </footer>
+            </div>
+            <!-- END PORTFOLIO MODAL -->
+
+{% endblock content %}
