@@ -8,6 +8,8 @@ class Projects(models.Model):
     title = models.CharField(max_length=150)
     description = models.TextField()
     tags = TaggableManager()
+    image = models.ImageField(upload_to='project/image', default='')
+    project_link = models.CharField(max_length=250, default='')
 
     class Meta:
         verbose_name = 'Project'
