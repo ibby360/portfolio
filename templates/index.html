@@ -212,20 +212,21 @@
                             </nav>
 
                             <ul class="portfolio__grid">
+                                {% for project in projects %}
                                 <!-- PORTFOLIO THUMBNAIL 1 -->
                                 <li class="portfolio__thumb filter-design filter-website">
                                     <div class="d-md-none">
-                                        <h3 class="heading-4 mb-2">Agriculture and business information system</h3>
+                                        <h3 class="heading-4 mb-2">{{ project.title }}</h3>
                                         <ul class="portfolio__grid-link-category mb-3" aria-hidden="true">
                                             <li class="heading-5 mr-2"><span>#</span>design</li>
                                             <li class="heading-5 mr-2"><span>#</span>website</li>
                                         </ul>
                                     </div>
                                     <a class="portfolio__grid-link" href="#portfolio-open">
-                                        <img class="portfolio__gallery-img img-fluid lazyimage" src="{% static 'assets/images/portfolio/home.png' %}" data-src="{% static 'assets/images/portfolio/home.png' %}" alt="An amazing project" />
+                                        <img class="portfolio__gallery-img img-fluid lazyimage" src="{{ project.mage.url }}" data-src="{{ project.image.url }}" alt="{{ project.title }}" />
                                         <div class="portfolio__grid-link-infos">
                                             <header class="portfolio__grid-link-infos-header" aria-hidden="true">
-                                                <h3 class="portfolio__grid-title heading-4">Agriculture and business information system
+                                                <h3 class="portfolio__grid-title heading-4">{{ project.title }}
                                                 </h3>
                                                 <ul class="portfolio__grid-link-category" aria-hidden="true">
                                                     <li class="portfolio__grid-link-category-item mr-2"><span>#</span>design</li>
@@ -242,36 +243,8 @@
                                     </a>
                                 </li>
                                 <!-- END PORTFOLIO THUMBNAIL 1 -->
+                                {% endfor %}
 
-                                <!-- PORTFOLIO THUMBNAIL 2 -->
-                                <!-- <li class="portfolio__thumb filter-photo filter-website">
-                                    <div class="d-md-none">
-                                        <h3 class="heading-4 mb-2">Another great fake project</h3>
-                                        <ul class="portfolio__grid-link-category mb-3" aria-hidden="true">
-                                            <li class="heading-5 mr-2"><span>#</span>photo</li>
-                                            <li class="heading-5 mr-2"><span>#</span>website</li>
-                                        </ul>
-                                    </div>
-                                    <a class="portfolio__grid-link" href="#portfolio-open">
-                                        <img class="portfolio__gallery-img img-fluid lazyimage" src="{% static 'portfolio-thumbnail-placeholder.png" data-src="{% static 'portfolio-item-2-1.jpg" alt="Another great fake project" />
-                                        <div class="portfolio__grid-link-infos">
-                                            <header class="portfolio__grid-link-infos-header" aria-hidden="true">
-                                                <h3 class="portfolio__grid-title heading-4">Another great fake project</h3>
-                                                <ul class="portfolio__grid-link-category" aria-hidden="true">
-                                                    <li class="portfolio__grid-link-category-item mr-2"><span>#</span>photo</li>
-                                                    <li class="portfolio__grid-link-category-item mr-2"><span>#</span>website</li>
-                                                </ul>
-                                            </header>
-                                            <footer class="portfolio__grid-link-infos-footer">
-                                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
-                                                    <rect fill="none" height="24" width="24" />
-                                                    <polygon points="21,11 21,3 13,3 16.29,6.29 6.29,16.29 3,13 3,21 11,21 7.71,17.71 17.71,7.71" />
-                                                </svg>
-                                            </footer>
-                                        </div>
-                                    </a>
-                                </li> -->
-                                <!-- END PORTFOLIO THUMBNAIL 2 -->
                             </ul>
                         </div>
                     </div>
@@ -445,7 +418,7 @@
                     <div class="portfolio-modal__main-inner">
                         <div class="swiper-container portfolio-modal__carousel">
                             <div class="swiper-wrapper">
-
+                                {% for project in projects %}
                                 <!-- PORTFOLIO ITEM 1 -->
                                 <div class="swiper-slide portfolio-item">
                                     <div class="portfolio-item__content">
@@ -458,7 +431,7 @@
                                         </div>
                                     </div>
                                     <div class="portfolio-item__imgs">
-                                        <div class="portfolio-item__img-wrapper"><img loading="lazy" class="img-fluid" src="{% static 'assets/images/portfolio/practice.png' %}" alt="Fake project image for demonstration purposes only" /></div>
+                                        <div class="portfolio-item__img-wrapper"><img loading="lazy" class="img-fluid" src="{{ project.projectimages.images.url }}" alt="{{ project.title }}" /></div>
                                         <div class="portfolio-item__img-wrapper"><img loading="lazy" class="img-fluid" src="{% static 'assets/images/portfolio/market.png' %}" alt="Fake project image for demonstration purposes only" /></div>
                                         <div class="portfolio-item__img-wrapper"><img loading="lazy" class="img-fluid" src="{% static 'assets/images/portfolio/cart.png' %}" alt="Fake project image for demonstration purposes only" /></div>
                                     </div>
@@ -467,11 +440,7 @@
                                             <div class="portfolio-item__description">
                                                 <div class="line line--horizontal line--portfolio"></div>
                                                 <p class="portfolio-item__description-p">
-                                                    This is my senior project.It's also my first project in which I created a website for agricultural and business information.
-                                                    All of the website's functionality is operational, including authentication, leaving a comment on a post, cart, and payment options.
-
-                                                    As the server-side language in my project, I'm using Python/Django.
-                                                    This project taught me a lot. 
+                                                    {{ project.description }}
                                                 </p>
                                                 <p class="bold">Skills</p>
                                                 <ul class="dash-list portfolio-item__description-list">
@@ -480,7 +449,7 @@
                                                     <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Front-end</li>
                                                     <li class="dash-list__item dash-list__item--inline"><span class="dash-list__dash" aria-hidden="true"></span> Problem Solving</li>
                                                 </ul>
-                                                <a class="portfolio-item__link-icon button button--icon button--icon-default" href="https://agribizzz.pythonanywhere.com" aria-label="Open An amazing fake project project">
+                                                <a class="portfolio-item__link-icon button button--icon button--icon-default" href="{{ project.project_link }}" aria-label="{{ image.title }}">
                                                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px">
                                                         <path d="M0 0h24v24H0z" fill="none" />
                                                         <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
@@ -490,6 +459,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                {% endfor %}
 
                                 <!-- POPRTFOLIO ITEM 2 -->
                                 <div class="swiper-slide portfolio-item">
