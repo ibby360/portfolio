@@ -257,82 +257,31 @@
                         <header class="section__header fade-up-start" data-gc="fade-up">
                             <h2>Blog</h2>
                             <div class="line line--horizontal line--heading" aria-hidden="true"></div>
-                            <p class="section__header-p">Because I am not an excellent writer, I like reading. Here are a few dev.to articles.  </p>
+                            <p class="section__header-p">Because I am not an excellent writer, I'm trying my best.  </p>
                         </header>
                         <div class="blog__grid">
+                            {% for post in posts %}    
                             <article class="blog-post fade-up-start" data-gc="fade-up">
                                 <span class="blog-post__surface"></span>
                                 <div class="position-relative">
-                                    <a class="blog-post__img-link" href="#"><img loading="lazy" class="blog-post__img img-fluid" src="{% static 'assets/images/becoming-a-web-developer.jpg' %}" alt="How to become a web developer vector image" /></a>
+                                    <a class="blog-post__img-link" href="{% url 'post_details' post.slug %}"><img loading="lazy" class="blog-post__img img-fluid" src="{{ post.thumbnail.url }}" alt="{{ post.title }}" /></a>
                                     <header class="blog-post__header">
-                                        <h3 class="blog-post__title heading-4"><a href="#">5 projects to master Front End Development</a></h3>
+                                        <h3 class="blog-post__title heading-4"><a href="{% url 'post_details' post.slug %}">{{ post.title }}</a></h3>
                                         <div class="blog-post__author">
                                             <div class="heading-5">
-                                                <time class="heading-5 blog-post__date">06 june 2021</time><span aria-hidden="true">,</span> <span class="blog-post__author-name color--secondary">By Tapajyoti Bose </span>
+                                                <time class="heading-5 blog-post__date">{{ post.publish | date }}</time><span aria-hidden="true">,</span> <a href="#about"><span class="blog-post__author-name color--secondary">{{ post.author.get_username }} </span></a>
                                             </div>
                                             <div class="line line--horizontal line--post"></div>
                                         </div>
                                     </header>
                                     <div class="blog-post__content">
                                         <p>
-                                            If you are starting on the journey to becoming a Front End Developer, once you get the basics down, you might want to make projects as the best way to learn any skill is to try making something hands-on.
+                                            {{ post.overview }}
                                         </p>
                                     </div>
                                 </div>
-                                <footer class="blog-post__footer">
-                                    <a class="blog-post__read-more" href="https://dev.to/ruppysuppy/5-projects-to-master-front-end-development-57p" target="_blank"><span aria-hidden="true">Read more</span> <span class="sr-only">Read more about: 5 Project to master front-end development</span></a>
-                                </footer>
                             </article>
-
-
-                            <article class="blog-post fade-up-start" data-gc="fade-up">
-                                <span class="blog-post__surface"></span>
-                                <div class="position-relative">
-                                    <a class="blog-post__img-link" href="#"><img loading="lazy" class="blog-post__img img-fluid" src="{% static 'assets/images/developer.png' %}" alt="A developers vector image" /></a>
-                                    <header class="blog-post__header">
-                                        <h3 class="blog-post__title heading-4"><a href="#">How to become a Successful Developer</a></h3>
-                                        <div class="blog-post__author">
-                                            <div class="heading-5">
-                                                <time class="heading-5 blog-post__date">06  june 2021</time><span aria-hidden="true">,</span> <span class="blog-post__author-name color--secondary">By Krowser </span>
-                                            </div>
-                                            <div class="line line--horizontal line--post"></div>
-                                        </div>
-                                    </header>
-                                    <div class="blog-post__content">
-                                        <p>
-                                            For me, being a software developer is one of the best jobs in the world. I love to code and getting paid for it is just awesome. 
-                                        </p>
-                                    </div>
-                                </div>
-                                <footer class="blog-post__footer">
-                                    <a class="blog-post__read-more" href="https://dev.to/krowser/how-to-become-a-successful-developer-4h2g" target="_blank"><span aria-hidden="true">Read more</span> <span class="sr-only">Read more about: how to become a successful developer</span></a>
-                                </footer>
-                            </article>
-
-
-                            <article class="blog-post fade-up-start" data-gc="fade-up">
-                                <span class="blog-post__surface"></span>
-                                <div class="position-relative">
-                                    <a class="blog-post__img-link" href="#"><img loading="lazy" class="blog-post__img img-fluid" src="{% static 'assets/images/portfolio.jpg' %}" alt="Flowering cherry tree" /></a>
-                                    <header class="blog-post__header">
-                                        <h3 class="blog-post__title heading-4"><a href="#">How to Build a Great Developer Portfolio (+ Examples & Tools) </a></h3>
-                                        <div class="blog-post__author">
-                                            <div class="heading-5">
-                                                <time class="heading-5 blog-post__date">26 may 2021</time><span aria-hidden="true">,</span> <span class="blog-post__author-name color--secondary">By Anastasia 🏄🏻‍♀️ </span>
-                                            </div>
-                                            <div class="line line--horizontal line--post"></div>
-                                        </div>
-                                    </header>
-                                    <div class="blog-post__content">
-                                        <p>
-                                            As any other specialists, developers need to market themselves to get dream jobs and projects, attract more clients and reach a desirable level of income. The necessary skills and a killer portfolio website are the two things that you need. 
-                                        </p>
-                                    </div>
-                                </div>
-                                <footer class="blog-post__footer">
-                                    <a class="blog-post__read-more" href="https://dev.to/actitime/how-to-build-a-great-developer-portfolio-examples-tools-bkj" target="_blank"><span aria-hidden="true">Read more</span> <span class="sr-only">Read more about: How to build a great developer portfolio examples tools</span></a>
-                                </footer>
-                            </article>
+                            {% endfor %}
                         </div>
                     </div>
                 </section>
