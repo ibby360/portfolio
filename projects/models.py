@@ -1,5 +1,4 @@
 from django.db import models
-from django.db.models.fields import TextField
 from taggit.managers import TaggableManager
 
 # Create your models here.
@@ -8,8 +7,10 @@ class Projects(models.Model):
     title = models.CharField(max_length=150)
     description = models.TextField()
     tags = TaggableManager()
-    image = models.ImageField(upload_to='project/image', default='')
-    project_link = models.CharField(max_length=250, default='')
+    image = models.ImageField(upload_to='project/image', blank=True, null=True )
+    project_link = models.CharField(max_length=250, null=True, blank=True)
+    github_repo = models.CharField(max_length=250, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = 'Project'
@@ -17,15 +18,3 @@ class Projects(models.Model):
 
     def __str__(self):
         return self.title
-
-class Projectimages(models.Model):
-    project = models.ForeignKey(Projects, on_delete=models.CASCADE)
-    images = models.FileField(upload_to='project/images/')
-
-    class Meta:
-        verbose_name = 'Project Image'
-        verbose_name_plural = 'Project Images'
-
-    def __str__(self):
-        return self.project.title
-    

@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ibby360° | Junior Web Developer</title>
+        <meta name="description" content="I'm Ibrahim, a Tanzanian web developer that likes creating things on the internet. I create websites and online apps that are fluid, responsive, and visually appealing." />
+        <meta name="keywords" content="ibby,ibby360, portfolio, accessibility, web, developer, junior, open source, coder" />
+        <meta name="author" content="Ibrahim Ramadhan" />
+        <meta property="og:locale" content="en" />
+        <meta property="og:url" content="https://ibby360.me/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Ibby360° - Junior web developer based in Tanzania." />
+        <meta property="og:description" content="I'm Ibrahim, a Tanzanian web developer that likes creating things on the internet. I create websites and online apps that are fluid, responsive, and visually appealing." />
+        <meta property="og:site_name" content="ibby360" />
+        <meta name="twitter:card" content="summary" />
+        
+        
+        <meta name="msapplication-config" content="./assets/browserconfig.xml" />
+        <meta name="application-name" content="Ibby360° - Personal Portfolio Website" />
+        <meta name="theme-color" content="#192136" />
+
+
+        <link rel="apple-touch-icon" sizes="120x120" href="{% static 'assets/img/favicon/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicon/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicon/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static 'assets/img/favicon/site.webmanifest' %}">
+        <link type="text/css" href="{% static 'vendor/%40fontawesome/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+        <link type="text/css" href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="header-global">
+            <nav id="navbar-main" aria-label="Primary navigation"
+                class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-dark">
+                <div class="container position-relative">
+                    <a class="navbar-brand me-lg-5" href="/">
+                        <span class="font-monospace h3 text-uppercase">Ibby360°</span>
+                        </a>
+                    <div class="navbar-collapse collapse me-auto" id="navbar_global">
+                        <div class="navbar-collapse-header">
+                            <div class="row">
+                                <div class="col-6 collapse-brand">
+                                    <a href="/">
+                                        <span class="font-monospace h3 text-uppercase">Ibby360°</span>
+                                    </a>
+                                </div>
+                                <div class="col-6 collapse-close"><a href="#navbar_global" class="fas fa-times text-color"
+                                        data-bs-toggle="collapse" data-bs-target="#navbar_global"
+                                        aria-controls="navbar_global" aria-expanded="false" title="close"
+                                        aria-label="Toggle navigation"></a></div>
+                            </div>
+                        </div>
+                        <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                            <li class="nav-item">
+                                <a href="#about" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#experience" class="nav-link">Experience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#projects" class="nav-link">Work</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contact" class="nav-link">Contact</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <a href="#" target="_blank" class="btn btn-outline-light-blue d-none d-lg-inline me-md-3">
+                            <span class="fas fa-file-alt me-2"></span>Resume
+                        </a>  
+                        <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        {% block content %}
+        {% endblock content %}
+        <footer class="footer pb-3 bg-dark text-white">
+            <div class="container">
+                
+                <hr class="bg-secondary">
+                <div class="row">
+                    <div class="col mb-md-0">
+                        <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
+                            <p class="fw-normal font-small mb-0"><a href="https://github.com/ibby360/">Ibby360°</a> © 
+                                <script type="text/javascript">document.write(new Date().getFullYear());</script>
+                                . Made with <i class='fa fa-heart text-danger'></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ..::: Scripts ..::: -->
+        {% include 'includes/scripts.html' %}
+
+
+    </body>
+
+</html>
