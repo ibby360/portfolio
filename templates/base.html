@@ -47,10 +47,13 @@
                                         <span class="font-monospace h3 text-uppercase">Ibby360°</span>
                                     </a>
                                 </div>
-                                <div class="col-6 collapse-close"><a href="#navbar_global" class="fas fa-times text-color"
+                                <div class="col-6 collapse-close">
+                                    <a href="#navbar_global" class="fas fa-times text-color"
                                         data-bs-toggle="collapse" data-bs-target="#navbar_global"
                                         aria-controls="navbar_global" aria-expanded="false" title="close"
-                                        aria-label="Toggle navigation"></a></div>
+                                        aria-label="Toggle navigation">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
@@ -81,10 +84,11 @@
             </nav>
         </header>
         {% block content %}
+        
         {% endblock content %}
+        <!-- ..::: Footer.::: -->
         <footer class="footer pb-3 bg-dark text-white">
             <div class="container">
-                
                 <hr class="bg-secondary">
                 <div class="row">
                     <div class="col mb-md-0">
@@ -100,7 +104,6 @@
         </footer>
         <!-- ..::: Scripts ..::: -->
         {% include 'includes/scripts.html' %}
-
 
     </body>
 
